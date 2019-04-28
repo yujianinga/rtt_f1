@@ -10,7 +10,7 @@
 #define RT_ALIGN_SIZE 4
 #define RT_THREAD_PRIORITY_32
 #define RT_THREAD_PRIORITY_MAX 32
-#define RT_TICK_PER_SECOND 1000
+#define RT_TICK_PER_SECOND 500
 #define RT_USING_OVERFLOW_CHECK
 #define RT_USING_HOOK
 #define RT_USING_IDLE_HOOK
@@ -22,9 +22,6 @@
 
 #define RT_USING_SEMAPHORE
 #define RT_USING_MUTEX
-#define RT_USING_EVENT
-#define RT_USING_MAILBOX
-#define RT_USING_MESSAGEQUEUE
 
 /* Memory Management */
 
@@ -47,7 +44,7 @@
 
 #define RT_USING_COMPONENTS_INIT
 #define RT_USING_USER_MAIN
-#define RT_MAIN_THREAD_STACK_SIZE 2048
+#define RT_MAIN_THREAD_STACK_SIZE 512
 #define RT_MAIN_THREAD_PRIORITY 10
 
 /* C++ features */
@@ -62,8 +59,8 @@
 #define FINSH_USING_SYMTAB
 #define FINSH_USING_DESCRIPTION
 #define FINSH_THREAD_PRIORITY 20
-#define FINSH_THREAD_STACK_SIZE 4096
-#define FINSH_CMD_SIZE 80
+#define FINSH_THREAD_STACK_SIZE 1024
+#define FINSH_CMD_SIZE 50
 #define FINSH_USING_MSH
 #define FINSH_USING_MSH_DEFAULT
 #define FINSH_USING_MSH_ONLY
@@ -80,6 +77,7 @@
 #define RT_SERIAL_USING_DMA
 #define RT_SERIAL_RB_BUFSZ 64
 #define RT_USING_PIN
+#define RT_USING_ADC
 
 /* Using WiFi */
 
@@ -93,6 +91,9 @@
 /* Network */
 
 /* Socket abstraction layer */
+
+
+/* Network interface device */
 
 
 /* light weight TCP/IP stack */
@@ -147,12 +148,7 @@
 /* miscellaneous packages */
 
 
-/* sample package */
-
 /* samples: kernel and components samples */
-
-
-/* example package: hello */
 
 #define SOC_FAMILY_STM32
 #define SOC_SERIES_STM32F1
@@ -171,6 +167,8 @@
 #define BSP_USING_UART
 #define BSP_USING_UART1
 #define BSP_UART1_RX_USING_DMA
+#define BSP_USING_ADC
+#define BSP_USING_ADC1
 
 /* Board extended module Drivers */
 

@@ -76,6 +76,8 @@
 #define RT_USING_SERIAL
 #define RT_SERIAL_USING_DMA
 #define RT_SERIAL_RB_BUFSZ 64
+#define RT_USING_I2C
+#define RT_USING_I2C_BITOPS
 #define RT_USING_PIN
 #define RT_USING_ADC
 
@@ -144,6 +146,9 @@
 
 /* peripheral libraries and drivers */
 
+#define PKG_USING_MPU6XXX
+#define PKG_USING_MPU6XXX_SAMPLE
+#define PKG_USING_MPU6XXX_LATEST_VERSION
 
 /* miscellaneous packages */
 
@@ -169,7 +174,9 @@
 #define BSP_UART1_RX_USING_DMA
 #define BSP_USING_ADC
 #define BSP_USING_ADC1
-
+#define BSP_USING_I2C2
+#define BSP_I2C2_SCL_PIN GET_PIN(B, 10)
+#define BSP_I2C2_SDA_PIN GET_PIN(B, 11)
 /* Board extended module Drivers */
 
 
